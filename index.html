@@ -13,12 +13,12 @@
             margin: 0;
             padding: 0;
             color: #333;
+            min-height: 100vh;
+            overflow-y: auto; /* Mengizinkan scroll vertikal */
             display: flex;
             justify-content: center;
-            align-items: center;
-            min-height: 100vh;
-            overflow: hidden;
-            position: relative;
+            align-items: flex-start; /* Diubah agar konten mulai dari atas */
+            padding-top: 20px;
         }
 
         .container {
@@ -32,10 +32,9 @@
             z-index: 10;
         }
 
-        /* Font untuk Della Sayangkuu diubah menjadi Open Sans agar lebih mudah dibaca */
         header h1 {
             font-family: 'Open Sans', sans-serif;
-            font-size: 3em; /* Ukuran sedikit dikurangi agar lebih ringkas */
+            font-size: 3em;
             color: #e57373;
             margin-bottom: 10px;
         }
@@ -83,6 +82,7 @@
             padding: 15px;
             border-radius: 8px;
             font-size: 1em;
+            margin-top: 20px;
         }
 
         /* Hati (Love) Animation */
@@ -129,7 +129,6 @@
 <body>
     <div class="container">
         <header>
-            <!-- Ganti font untuk judul menjadi Open Sans -->
             <h1>DELLA SAYANGKUU</h1>
         </header>
         <main>
