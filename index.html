@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Anniversary Cinta</title>
+    <title>Anniversary Prizco dan Della</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -40,24 +40,24 @@
             color: #d32f2f;
         }
 
-        .gallery {
+        .message p {
+            font-size: 1.2em;
+            line-height: 1.6em;
+            color: #555;
+        }
+
+        .memory {
             margin-top: 20px;
         }
 
-        .gallery h2 {
+        .memory h2 {
             color: #d32f2f;
         }
 
-        .image-gallery {
-            display: flex;
-            justify-content: space-around;
-        }
-
-        .image-gallery img {
-            border-radius: 8px;
-            width: 150px;
-            height: 150px;
-            object-fit: cover;
+        .memory p {
+            font-size: 1.1em;
+            color: #555;
+            line-height: 1.6em;
         }
 
         footer {
@@ -73,29 +73,27 @@
 <body>
     <div class="container">
         <header>
-            <h1>Selamat Anniversary!</h1>
+            <h1>Selamat Anniversary, Prizco & Della!</h1>
         </header>
         <main>
             <section class="message">
                 <h2>Cinta Kita</h2>
-                <p>Selamat hari jadi yang ke-<span id="year"></span>! Semoga cinta kita terus berkembang dan semakin kuat.</p>
+                <p>Selamat hari jadi yang ke-<span id="year"></span>, Prizco dan Della! Semoga hari-hari kita terus diwarnai oleh cinta, tawa, dan kebahagiaan.</p>
+                <p>Terima kasih sudah menjadi bagian terpenting dalam hidupku. Perjalanan kita mungkin belum selalu mulus, tapi cinta kita selalu lebih kuat dari tantangan apa pun yang kita hadapi. Semoga setiap tahun yang kita lewati semakin penuh dengan cinta dan kesetiaan.</p>
             </section>
-            <section class="gallery">
-                <h2>Kenangan Indah</h2>
-                <div class="image-gallery">
-                    <img src="https://via.placeholder.com/150" alt="Kenangan 1">
-                    <img src="https://via.placeholder.com/150" alt="Kenangan 2">
-                    <img src="https://via.placeholder.com/150" alt="Kenangan 3">
-                </div>
+            <section class="memory">
+                <h2>Kenangan dan Harapan</h2>
+                <p>Sejak pertama kali kita bersama, begitu banyak momen indah yang telah kita ciptakan. Setiap senyuman, setiap tawa, dan setiap pelukan terasa seperti hadiah yang tak ternilai. Aku berharap bahwa kita akan terus membuat kenangan-kenangan baru yang lebih indah lagi di masa depan.</p>
+                <p>Aku tak sabar untuk melihat ke mana cinta kita akan membawa kita. Semoga kita selalu bisa bersama, saling menguatkan, dan saling mencintai lebih dalam dari hari ke hari.</p>
             </section>
         </main>
         <footer>
-            <p>&copy; 2024 Cinta Kita. Semua hak cipta dilindungi.</p>
+            <p>&copy; 2024 Prizco & Della. Semua hak cipta dilindungi.</p>
         </footer>
     </div>
     <script>
         document.addEventListener('DOMContentLoaded', () => {
-            const startYear = 2023; // Ubah tahun sesuai dengan tahun awal
+            const startYear = 2020; // Ubah tahun sesuai dengan tahun awal hubungan
             const currentYear = new Date().getFullYear();
             const anniversaryYear = currentYear - startYear;
 
