@@ -1,127 +1,106 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="id">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Prizco Zulvano Shaputra - Personal Website</title>
+    <title>Anniversary Cinta</title>
     <style>
         body {
             font-family: Arial, sans-serif;
-            background-color: #f4f4f4;
+            background: #f9f9f9;
+            color: #333;
             margin: 0;
             padding: 0;
         }
 
+        .container {
+            width: 80%;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
         header {
-            background-color: #4CAF50;
-            color: white;
             text-align: center;
+            margin-bottom: 20px;
+        }
+
+        header h1 {
+            font-size: 2.5em;
+            color: #e57373;
+        }
+
+        .message {
+            background: #fff;
+            border-radius: 8px;
             padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
         }
 
-        nav {
-            text-align: center;
-            margin: 10px 0;
+        .message h2 {
+            color: #d32f2f;
         }
 
-        nav a {
-            color: #333;
-            text-decoration: none;
-            margin: 0 15px;
-            font-weight: bold;
+        .gallery {
+            margin-top: 20px;
         }
 
-        section {
-            padding: 20px;
-            text-align: center;
+        .gallery h2 {
+            color: #d32f2f;
+        }
+
+        .image-gallery {
+            display: flex;
+            justify-content: space-around;
+        }
+
+        .image-gallery img {
+            border-radius: 8px;
+            width: 150px;
+            height: 150px;
+            object-fit: cover;
         }
 
         footer {
-            background-color: #4CAF50;
-            color: white;
             text-align: center;
+            margin-top: 20px;
             padding: 10px;
-            position: fixed;
-            bottom: 0;
-            width: 100%;
-        }
-
-        h2 {
-            color: #4CAF50;
-        }
-
-        .profile {
-            max-width: 200px;
-            margin: 0 auto;
-            border-radius: 50%;
-            border: 2px solid #4CAF50;
-        }
-
-        .bio {
-            max-width: 600px;
-            margin: 0 auto;
-            text-align: left;
+            background: #e57373;
+            color: #fff;
+            border-radius: 8px;
         }
     </style>
 </head>
 <body>
+    <div class="container">
+        <header>
+            <h1>Selamat Anniversary!</h1>
+        </header>
+        <main>
+            <section class="message">
+                <h2>Cinta Kita</h2>
+                <p>Selamat hari jadi yang ke-<span id="year"></span>! Semoga cinta kita terus berkembang dan semakin kuat.</p>
+            </section>
+            <section class="gallery">
+                <h2>Kenangan Indah</h2>
+                <div class="image-gallery">
+                    <img src="https://via.placeholder.com/150" alt="Kenangan 1">
+                    <img src="https://via.placeholder.com/150" alt="Kenangan 2">
+                    <img src="https://via.placeholder.com/150" alt="Kenangan 3">
+                </div>
+            </section>
+        </main>
+        <footer>
+            <p>&copy; 2024 Cinta Kita. Semua hak cipta dilindungi.</p>
+        </footer>
+    </div>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const startYear = 2023; // Ubah tahun sesuai dengan tahun awal
+            const currentYear = new Date().getFullYear();
+            const anniversaryYear = currentYear - startYear;
 
-    <!-- Header -->
-    <header>
-        <h1>Prizco Zulvano Shaputra</h1>
-        <p>Web Developer | Designer | Tech Enthusiast</p>
-    </header>
-
-    <!-- Navigation -->
-    <nav>
-        <a href="#about">About</a>
-        <a href="#skills">Skills</a>
-        <a href="#contact">Contact</a>
-        <a href="#anniversary">Anniversary</a>
-    </nav>
-
-    <!-- About Section -->
-    <section id="about">
-        <h2>About Me</h2>
-        <img src="https://via.placeholder.com/150" alt="Prizco Zulvano Shaputra" class="profile">
-        <div class="bio">
-            <p>Hello, my name is Prizco Zulvano Shaputra, and I am passionate about web development, design, and all things technology. I love creating beautiful and functional websites that provide excellent user experiences.</p>
-            <p>I am constantly learning new skills and staying up-to-date with the latest trends in web development. Let's build something great together!</p>
-        </div>
-    </section>
-
-    <!-- Skills Section -->
-    <section id="skills">
-        <h2>Skills</h2>
-        <ul>
-            <li>HTML5, CSS3, JavaScript</li>
-            <li>Responsive Web Design</li>
-            <li>Graphic Design</li>
-            <li>UI/UX Design</li>
-            <li>Git & GitHub</li>
-        </ul>
-    </section>
-
-    <!-- Contact Section -->
-    <section id="contact">
-        <h2>Contact Me</h2>
-        <p>If you'd like to get in touch, feel free to reach out via email:</p>
-        <p><strong>Email:</strong> prizco@example.com</p>
-    </section>
-
-    <!-- Anniversary Section -->
-    <section id="anniversary" style="background-color: #fff; padding: 20px;">
-        <h2>8th Month Anniversary</h2>
-        <p>Happy 8th Month Anniversary, Prizco and Della!</p>
-        <p>Today marks 8 wonderful months of love, laughter, and unforgettable moments together. Here’s to celebrating all the amazing times you've shared and looking forward to many more!</p>
-        <img src="https://via.placeholder.com/400x200?text=Happy+8th+Month+Anniversary" alt="Anniversary Celebration" style="max-width: 100%; border-radius: 10px;">
-        <p>May your love continue to grow stronger with each passing day. Cheers to you both!</p>
-    </section>
-
-    <!-- Footer -->
-    <footer>
-        <p>&copy; 2024 Prizco Zulvano Shaputra. All Rights Reserved.</p>
-    </footer>
-
+            document.getElementById('year').textContent = anniversaryYear;
+        });
+    </script>
 </body>
 </html>
