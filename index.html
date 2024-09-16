@@ -9,7 +9,7 @@
 
         body {
             font-family: 'Open Sans', sans-serif;
-            background: linear-gradient(135deg, #f6d365 0%, #fda085 100%);
+            background: linear-gradient(135deg, #fbc2eb 0%, #a6c1ee 100%);
             margin: 0;
             padding: 0;
             color: #333;
@@ -17,6 +17,8 @@
             justify-content: center;
             align-items: center;
             min-height: 100vh;
+            overflow: hidden;
+            position: relative;
         }
 
         .container {
@@ -26,12 +28,13 @@
             padding: 30px;
             max-width: 800px;
             text-align: center;
-            animation: fadeIn 2s ease-in-out;
+            position: relative;
+            z-index: 10;
         }
 
         header h1 {
             font-family: 'Great Vibes', cursive;
-            font-size: 3em;
+            font-size: 3.5em;
             color: #e57373;
             margin-bottom: 10px;
         }
@@ -81,9 +84,60 @@
             font-size: 1em;
         }
 
-        @keyframes fadeIn {
-            from { opacity: 0; transform: translateY(20px); }
-            to { opacity: 1; transform: translateY(0); }
+        /* Hati (Love) Animation */
+        .heart {
+            position: absolute;
+            width: 20px;
+            height: 20px;
+            background-color: #ff6b81;
+            transform: rotate(45deg);
+            animation: float 8s ease-in infinite;
+        }
+
+        .heart::before, .heart::after {
+            content: '';
+            position: absolute;
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            background-color: #ff6b81;
+        }
+
+        .heart::before {
+            top: -10px;
+            left: 0;
+        }
+
+        .heart::after {
+            left: 10px;
+            top: 0;
+        }
+
+        @keyframes float {
+            0% {
+                transform: translateY(0) rotate(45deg);
+                opacity: 1;
+            }
+            100% {
+                transform: translateY(-100vh) rotate(45deg);
+                opacity: 0;
+            }
+        }
+
+        /* Keyframes untuk random position */
+        @keyframes move {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(100vw); }
+        }
+
+        /* Keyframes untuk ukuran hati */
+        @keyframes grow {
+            0%, 100% {
+                transform: scale(1);
+            }
+            50% {
+                transform: scale(1.5);
+            }
         }
     </style>
 </head>
@@ -109,6 +163,7 @@
         </footer>
     </div>
 
+    <!-- Script untuk menghitung berapa tahun anniversary -->
     <script>
         document.addEventListener('DOMContentLoaded', () => {
             const startYear = 2020; // Ubah tahun sesuai dengan tahun awal hubungan
@@ -117,6 +172,23 @@
 
             document.getElementById('year').textContent = anniversaryYear;
         });
+    </script>
+
+    <!-- Script untuk membuat animasi hati -->
+    <script>
+        function createHeart() {
+            const heart = document.createElement('div');
+            heart.classList.add('heart');
+            heart.style.left = Math.random() * 100 + 'vw';
+            heart.style.animationDuration = Math.random() * 3 + 5 + 's'; // Durasi random antara 5 - 8 detik
+            document.body.appendChild(heart);
+
+            setTimeout(() => {
+                heart.remove();
+            }, 8000); // Hati akan hilang setelah 8 detik
+        }
+
+        setInterval(createHeart, 300); // Setiap 300ms akan muncul hati baru
     </script>
 </body>
 </html>
